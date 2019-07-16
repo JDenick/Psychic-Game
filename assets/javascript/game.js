@@ -22,6 +22,7 @@ function startGame() {
     document.getElementById("winSection").innerHTML = winCount;
     document.getElementById("lossSection").innerHTML = lossCount;
     document.getElementById("numGuesses").innerHTML = guessesLeft;
+    
 
     //Testing / Debugging
     console.log(selectedLetter);
@@ -38,7 +39,17 @@ function checkletters(letter) {
             winCount++
             alert("Wins: " + winCount);
         }
+        
+        else {
+            wrongLetters++
+            guessesLeft--
+            alert("Wrong Letter " + wrongLetters);
+            alert("guessesLeft " + guessesLeft);
+        }
     }
+
+
+
 }
 
 // MAIN PROCESS ***************************************************************************
